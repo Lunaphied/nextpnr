@@ -60,6 +60,7 @@ void arch_wrap_python(py::module &m)
                            .def("pack", &Context::pack)
                            .def("place", &Context::place)
                            .def("route", &Context::route);
+						   .def("meow", &Context::meow);
 
     auto belpin_cls =
             py::class_<BelPin>(m, "BelPin").def_readwrite("bel", &BelPin::bel).def_readwrite("pin", &BelPin::pin);
